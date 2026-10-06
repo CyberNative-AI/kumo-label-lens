@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "reason": "First attempt stopped at a consumer assertion that required probability columns in fixed order. The upstream default recipe shuffles categories; class identity must bind to column names.",
+    "change": "Require exactly the two named columns 0 and 1, retain native column order and probabilities, and reorder explicitly to outside=0/inside=1 for the explorer. No protocol conditions, coordinates, seeds, recipe, checkpoint, estimators or bounds changed.",
+    "attempt_1": "Exit 1 after the original condition at the class-order assertion. No complete result file or claimed result. The failed source hash remains in the pre-run freeze.",
+    "timing": "Appended before the second execution; no completed result had been viewed."
+  }
+]

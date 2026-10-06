@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "question": "How does Kumo Tabular Small's recorded probability map change when one of 16 synthetic context labels changes?",
+  "release": {"name": "NVIDIA Kumo Tabular", "date": "2026-09-29", "url": "https://huggingface.co/blog/nvidia/kumo-tabular"},
+  "source_revision": "391961ae82b4bf54af1aca31e9fc0a0c678117ce",
+  "model_revision": "3c3e10bbdb590ace29e7026847f92db3c603096d",
+  "model_file": "small/classifier.pt",
+  "model_license": "OpenMDW-1.1",
+  "seed": 20261006,
+  "context_axis": [-0.9, -0.3, 0.3, 0.9],
+  "query_axis": [-1.2, -1.0, -0.8, -0.6, -0.4, -0.2, 0.0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2],
+  "order": "y ascending, then x ascending",
+  "synthetic_rule": "inside=1 if x*x+y*y < 0.36, otherwise outside=0",
+  "changed_context_index": 5,
+  "conditions": ["original", "one-label-changed", "original-repeat"],
+  "settings": {"task": "classification", "size": "small", "device": "cpu", "dtype": "float32", "num_estimators": 1, "threads": 2, "recipe": "upstream default"},
+  "report": ["all context inputs", "all query inputs", "all class probabilities", "all condition timings", "changed argmax count", "maximum absolute probability change", "same-seed repeat maximum absolute difference"],
+  "limits": {"inference_seconds": 180, "cpu_cores": 2, "memory_mib": 2048, "swap_mib": 0, "pids": 128, "network": "none during inference", "filesystem": "read-only source/dependencies/weights; one output directory and bounded tmpfs", "dollar_cost": 0, "downloads_max_mib": 1024, "abort": "timeout, memory limit, nonfinite output, wrong class order or device, missing or mismatched weight hash"},
+  "claims": "Descriptive outputs for two tiny synthetic contexts only. No benchmark, accuracy or calibration claim; same-code repeat is not independent reproduction. Do not replace or select conditions after seeing results."
+}

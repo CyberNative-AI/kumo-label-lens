@@ -1,0 +1,19 @@
+{
+  "frozen_at": "2026-10-06T16:58:07.197151+00:00",
+  "files": {
+    "protocol-v2.json": "501898ca24ff0986e13bbb07ee14fdd9b5c2550001cf5ed04553e9ae3af9f34c",
+    "record_v2.py": "266eddf442f6c0b6dd47095a2a8e770076d774438538fbcf51fcf6e22164fb0b",
+    "run_v2.py": "681d4ccf2877829ce7c7ea079af28be98d341ad483bfb29467696654290333c1",
+    "metrics_v2.py": "7b6821aa09f8d1bdea0edc33d5085e20ed6ac5c33ce5585f0fd1b08142dfa76d",
+    "verify_v1.py": "9263a4d75619fdfbb85c4cc24f8a4edfc76840de51f1c1336e8d4c20eb8dfd7b",
+    "record.py": "51a0405e7aea4969800a8f896bdd930225e00f0760aefa28ec4ae9a0460c2c44",
+    "protocol.json": "72a5e7921f556ac61df6aa3992baa998f7daf444f2ead9f466cc0a107ffe97c5",
+    "results.json": "9577a747d913db6315bcad7dbd806408b044df623f0609cff03612797ab648a8",
+    "uv.lock": "cc063b178c85a317d447fb1c2972250d96b01c1a98eaf12a985196889d51172e",
+    "pyproject.toml": "bffd50c6393bba9164bc556e2e3bab584366be584a93b992252e2895c06b3675",
+    "environment-v2/pyproject.toml": "35f2b098a6e275d1e14d6e08dcfafbb5ee3463df4831e0047f1e94208bdf8da1",
+    "environment-v2/uv.lock": "d7762e4863490966ca717902fe333b01afc576cf7c1f44f9e9e803d052d2d105"
+  },
+  "scope": "Frozen before v2 execution; v1 Kumo original is reused, no v1 inference rerun",
+  "weight_sha256": "1ff91f484e19021aaf7d9eff6cc07e6d95a60b4aaad473e83e2ab2c3bfd2b617"
+}

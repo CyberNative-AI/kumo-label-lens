@@ -1,0 +1,21 @@
+{
+  "classification": "prepared_public_candidate_not_published",
+  "input_origin": "company-authored synthetic coordinates and labels",
+  "privacy_class": "public synthetic; no personal or customer data",
+  "release_date": "2026-09-29",
+  "license_source": "https://huggingface.co/nvidia/Kumo-Tabular/resolve/3c3e10bbdb590ace29e7026847f92db3c603096d/LICENSE",
+  "license_file_sha256": "44b43ed7b8e0f987dc5e90fb6cb4b901eccf0b14dc9f17a9033951603851d37d",
+  "pre_run_freeze": {
+    "protocol.json": "72a5e7921f556ac61df6aa3992baa998f7daf444f2ead9f466cc0a107ffe97c5",
+    "record.py": "98ee526be6cd1ec6a8a3d5754fd32fc10051844eacc519b5b3d92471384cfb43",
+    "pyproject.toml": "bffd50c6393bba9164bc556e2e3bab584366be584a93b992252e2895c06b3675",
+    "uv.lock": "cc063b178c85a317d447fb1c2972250d96b01c1a98eaf12a985196889d51172e"
+  },
+  "amended_recorder_sha256": "51a0405e7aea4969800a8f896bdd930225e00f0760aefa28ec4ae9a0460c2c44",
+  "recorded_output_sha256": "9577a747d913db6315bcad7dbd806408b044df623f0609cff03612797ab648a8",
+  "evidence_label": "Executed",
+  "review": "Producing implementation and checks only; independent artifact/scientific and security/license/disclosure review pending",
+  "publisher": "CyberNative AI LLC",
+  "correction_channel": "hello@cybernative.ai",
+  "corrections": "Material public corrections will carry dates and links from the affected artifact."
+}

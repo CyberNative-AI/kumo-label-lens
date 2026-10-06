@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "classification": "private_review_artifact_not_published",
+  "evidence_label": "Executed",
+  "recorded_output_sha256": "04b2a0c64d0e0f67225fe7e7f4cc86b70a117151cead6ae94060ba914d4bf86c",
+  "freeze_sha256": "e71abf586bc24b6c2810574c3701c5d153d19bd4e12393675fded0d058317a4e",
+  "input_origin": "company-authored synthetic coordinates/labels",
+  "privacy_class": "synthetic; no personal/customer data",
+  "baseline": "retained original condition from results.json, byte-for-byte; no v1 rerun",
+  "execution_receipt": "execution-v2.json",
+  "protocol_amendments": "v1 class-order correction retained in amendments.json; no v2 protocol amendment or execution failure",
+  "review": "producing-agent verification only; independent technical, scientific/claim, security/license/disclosure and creative review pending",
+  "publisher": "CyberNative AI LLC",
+  "correction_channel": "hello@cybernative.ai",
+  "contributors": "AI-assisted implementation/writing by CyberNative AI LLC; outputs from NVIDIA Kumo Tabular and scikit-learn",
+  "outside_use": "unavailable; no publication or external response claimed"
+}

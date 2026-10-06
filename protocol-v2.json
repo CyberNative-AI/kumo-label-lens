@@ -1,0 +1,149 @@
+{
+  "version": 2,
+  "question": "How far does each single wrong label reach, compared with k-NN(3) and logistic regression on the identical inputs?",
+  "release": {
+    "name": "NVIDIA Kumo Tabular",
+    "date": "2026-09-29",
+    "url": "https://huggingface.co/blog/nvidia/kumo-tabular"
+  },
+  "source_revision": "391961ae82b4bf54af1aca31e9fc0a0c678117ce",
+  "model_revision": "3c3e10bbdb590ace29e7026847f92db3c603096d",
+  "model_file": "small/classifier.pt",
+  "model_license": "OpenMDW-1.1",
+  "seed": 20261006,
+  "context_axis": [
+    -0.9,
+    -0.3,
+    0.3,
+    0.9
+  ],
+  "query_axis": [
+    -1.2,
+    -1.0,
+    -0.8,
+    -0.6,
+    -0.4,
+    -0.2,
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0,
+    1.2
+  ],
+  "order": "y ascending, then x ascending",
+  "synthetic_rule": "inside=1 if x*x+y*y < 0.36, otherwise outside=0",
+  "conditions": {
+    "kumo": [
+      "original",
+      "flip-00",
+      "flip-01",
+      "flip-02",
+      "flip-03",
+      "flip-04",
+      "flip-05",
+      "flip-06",
+      "flip-07",
+      "flip-08",
+      "flip-09",
+      "flip-10",
+      "flip-11",
+      "flip-12",
+      "flip-13",
+      "flip-14",
+      "flip-15"
+    ],
+    "knn": [
+      "original",
+      "flip-00",
+      "flip-01",
+      "flip-02",
+      "flip-03",
+      "flip-04",
+      "flip-05",
+      "flip-06",
+      "flip-07",
+      "flip-08",
+      "flip-09",
+      "flip-10",
+      "flip-11",
+      "flip-12",
+      "flip-13",
+      "flip-14",
+      "flip-15"
+    ],
+    "lr": [
+      "original",
+      "flip-00",
+      "flip-01",
+      "flip-02",
+      "flip-03",
+      "flip-04",
+      "flip-05",
+      "flip-06",
+      "flip-07",
+      "flip-08",
+      "flip-09",
+      "flip-10",
+      "flip-11",
+      "flip-12",
+      "flip-13",
+      "flip-14",
+      "flip-15"
+    ]
+  },
+  "settings": {
+    "task": "classification",
+    "size": "small",
+    "device": "cpu",
+    "dtype": "float32",
+    "num_estimators": 1,
+    "threads": 2,
+    "recipe": "upstream default"
+  },
+  "report": [
+    "all context/query inputs",
+    "all 51 conditions including reused Kumo baseline",
+    "native and named class probabilities",
+    "per-condition timings and warnings/failures",
+    "per-flip reach",
+    "all-flip median/max summaries",
+    "execution environment and resource receipt"
+  ],
+  "limits": {
+    "inference_seconds": 180,
+    "cpu_cores": 2,
+    "memory_mib": 2048,
+    "swap_mib": 0,
+    "pids": 128,
+    "network": "none during inference",
+    "filesystem": "read-only source/dependencies/weights; one output directory and bounded tmpfs",
+    "dollar_cost": 0,
+    "downloads_max_mib": 1024,
+    "abort": "timeout, memory limit, nonfinite output, wrong class order or device, missing or mismatched weight hash"
+  },
+  "claims": "One tiny synthetic two-feature table, one seed, one checkpoint, fixed model recipes. Preserve every condition and failure. No accuracy/calibration/general robustness claim; no scientific reproduction claimed.",
+  "weight_sha256": "1ff91f484e19021aaf7d9eff6cc07e6d95a60b4aaad473e83e2ab2c3bfd2b617",
+  "baseline": "Kumo original from results.json, retained byte-for-byte; no v1 inference rerun",
+  "comparator_settings": {
+    "scikit_learn": "1.9.1",
+    "knn": "KNeighborsClassifier(n_neighbors=3), all other defaults",
+    "lr": "LogisticRegression(), all defaults",
+    "features": "identical float32 x/y arrays in original row order; no added scaling or feature engineering; upstream Kumo default recipe retained",
+    "tie_rule": "argmax of [P(outside),P(inside)]; exact ties resolve to outside",
+    "knn_ties": "default algorithm; equidistant neighbors can depend on fixed row order"
+  },
+  "reach_definition": {
+    "changed_predictions": "argmax changes among all 169 fixed queries",
+    "max_probability_change": "max absolute P(inside) shift among all 169 queries",
+    "farthest_changed_distance": "Euclidean distance from flipped context row to farthest argmax-changed query, synthetic coordinate units; null when no classes change",
+    "aggregate": "median and maximum across ALL 16 flips for each metric/model; no-change distance counts as 0 for aggregation"
+  },
+  "stop_test": {
+    "failure": "STOP on any original abort condition or failed condition; retain partial output and missing conditions as not executed",
+    "usefulness": "CONTINUE_PRIVATE_REVIEW only if Kumo vs either comparator differs by >=1 changed query in median/max or >=0.01 max P shift in median/max across all 16 flips; otherwise STOP",
+    "interpretation": "private illustrative contrast only; not evidence of accuracy, calibration or superior robustness"
+  },
+  "comparator_source": "https://scikit-learn.org/stable/auto_examples/classification/plot_classifier_comparison.html"
+}

@@ -1,0 +1,18 @@
+[project]
+name = "kumo-label-lens"
+version = "0.1.0"
+description = "Recorded CPU predictions from a synthetic label-change experiment"
+requires-python = "==3.12.*"
+dependencies = [
+    "torch==2.14.0",
+    "structured-data-models",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+structured-data-models = { url = "https://github.com/NVIDIA/structured-data-models/archive/391961ae82b4bf54af1aca31e9fc0a0c678117ce.tar.gz" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
