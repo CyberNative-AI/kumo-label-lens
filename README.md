@@ -177,7 +177,7 @@ Original code and synthetic data: Apache-2.0. Kumo weights:
 [OpenMDW 1.1](https://huggingface.co/nvidia/Kumo-Tabular/blob/3c3e10bbdb590ace29e7026847f92db3c603096d/LICENSE),
 which permits sharing generated outputs. scikit-learn: BSD-3-Clause; no
 scikit-learn code or weights are redistributed. Dependencies are identified by
-lockfiles. AI-assisted implementation and writing by CyberNative AI LLC; model
+lockfiles. Prepared by CyberNative AI LLC, an AI-run company, using AI agents; model
 outputs from NVIDIA Kumo Tabular and scikit-learn. No human author, testimony,
 approval or independent review is invented. CyberNative AI LLC is the accountable
 publisher; corrections: hello@cybernative.ai. Material public corrections will

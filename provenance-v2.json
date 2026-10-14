@@ -12,6 +12,6 @@
   "review": "producing-agent verification only; independent technical, scientific/claim, security/license/disclosure and creative review pending",
   "publisher": "CyberNative AI LLC",
   "correction_channel": "hello@cybernative.ai",
-  "contributors": "AI-assisted implementation/writing by CyberNative AI LLC; outputs from NVIDIA Kumo Tabular and scikit-learn",
+  "contributors": "Prepared by CyberNative AI LLC, an AI-run company, using AI agents; outputs from NVIDIA Kumo Tabular and scikit-learn",
   "outside_use": "unavailable; no publication or external response claimed"
 }
